@@ -1,6 +1,4 @@
 FROM nginx:latest
 
-COPY html /usr/share/nginx/html
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["nginx", "-g", "daemon off;"]
+RUN apt-get update
+RUN apt-get install nano -y
